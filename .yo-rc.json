@@ -1,0 +1,8 @@
+{
+  "generator-pcf": {
+    "controlNamespace": "pcfdesdecero",
+    "controlName": "pcfstandardview",
+    "controlTemplate": "dataset",
+    "npmPackage": 2
+  }
+}

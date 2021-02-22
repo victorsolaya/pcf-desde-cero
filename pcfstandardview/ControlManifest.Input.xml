@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<manifest>
+  <control namespace="pcfdesdecero" constructor="pcfstandardview" version="0.0.1" display-name-key="pcfstandardview" description-key="pcfstandardview description" control-type="standard" preview-image="img/preview.png">
+    <data-set name="dataset" display-name-key="Dataset que va a ser usado"/>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/pcfstandardview.css" order="1"/>
+      <resx path="strings/pcfstandardview.1033.resx" version="1.0.0"/>
+    </resources>
+  </control>
+</manifest>
