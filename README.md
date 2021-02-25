@@ -4,7 +4,10 @@ Este es el esqueleto que vamos a usar para crear nuestro PCF y que vamos a usar 
 
 ### Requisitos si clonas
 
-Una vez que te descargues este código vas a tener que ejecutar ```npm install```
+Para clonar simplemente tienes que ejecutar:
+```git clone https://github.com/victorsolaya/pcf-desde-cero.git``` en la carpeta que desees incluir este PCF.
+
+Una vez que tengas todo el código tendrás que ejecutar ```npm install``` en tu terminal de comandos.
 Esto se hará que se te cree tu carpeta de node_modules.
 
 ### Requisitos para vuestro PATH
