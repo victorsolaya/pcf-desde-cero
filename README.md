@@ -38,3 +38,11 @@ Dentro de las variables del usuario, deberá de haber una (y si no creadla) que 
 - .NET 3.1 (https://dotnet.microsoft.com/download/dotnet/3.1)
 - NodeJS (https://nodejs.org/es/)
 - Yeoman (https://yeoman.io/)
+
+### Si deseas seguir la doc de Microsoft en vez de usar PCF Builder
+
+En el caso de que desees usar la doc de Microsoft en vez de usar el PCF Builder, te dejo la documentación para que puedas ir a ella directamente:
+
+https://docs.microsoft.com/en-us/powerapps/developer/component-framework/create-custom-controls-using-pcf
+
+A partir de aquí es todo tuyo para seguir aprendiendo por si hay algún término que no te haya encajado del todo en el vídeo.
