@@ -25,6 +25,7 @@ Dentro de las variables del usuario, deberá de haber una (y si no creadla) que 
 - C:\Windows\System32
 - C:\Program Files\Git\bin\
 - C:\Program Files\Git\cmd\
+- C:\Program Files\dotnet\
 
 ### Programas a descargar 
 
