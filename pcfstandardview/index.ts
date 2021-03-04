@@ -1,3 +1,4 @@
+import { runInThisContext } from "vm";
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
@@ -38,9 +39,35 @@ export class pcfstandardview implements ComponentFramework.StandardControl<IInpu
 	{
 		// Add code to update control view
 		const dataset = this.context.parameters.dataset;
+		// Obtener columnas
 		const columns = dataset.columns;
-		const records = dataset.records;
-		
+		// Obtener los registros en un array
+		const records = Object.values(dataset.records);
+		debugger
+		//Creación HTML
+		const table = document.createElement("table");
+		const thead = document.createElement("thead");
+		const tbody = document.createElement("tbody");
+		// For..of == forEach) -> Diferentes scopes
+		//Por cada una de las columnas
+		for(const column of columns) {
+			const th = document.createElement("th");
+			const nameColumn = column.name;
+			th.textContent = nameColumn;
+			thead.appendChild(th);
+			const tr = document.createElement("tr");
+			// Por cada uno de los registros
+			for(const record of records) {
+				const td = document.createElement("td");
+				const valueColumns = record.getFormattedValue(nameColumn);
+				td.textContent = valueColumns;
+				tr.appendChild(td)
+			}
+			tbody.appendChild(tr)
+		}
+		table.appendChild(thead)
+		table.appendChild(tbody);
+		this.container.appendChild(table)
 	}
 
 	/** 
