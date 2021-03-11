@@ -1,6 +1,12 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
 import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 type DataSet = ComponentFramework.PropertyTypes.DataSet;
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import FormComponent from "./components/form";
+import { FieldForm } from "./utilities/interfaces";
+
+
 
 export class pcfstandardview implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 	container: HTMLDivElement;
@@ -39,8 +45,23 @@ export class pcfstandardview implements ComponentFramework.StandardControl<IInpu
 		// Add code to update control view
 		const dataset = this.context.parameters.dataset;
 		const columns = dataset.columns;
+<<<<<<< Updated upstream
 		const records = dataset.records;
 		
+=======
+		// Obtener los registros en un array
+		const record = Object.values(dataset.records)[0];
+		let arrayFields: FieldForm[] = [];
+		for(const column of columns) {
+			const name = column.name;
+			const displayName = column.displayName;
+			const dataType = column.dataType;
+			const fieldForm: FieldForm = { DataType: dataType, DisplayName: displayName, Name: name} ;
+			arrayFields.push(fieldForm);
+		}
+
+		ReactDOM.render(React.createElement(FormComponent, {arrayFields, record}), this.container);
+>>>>>>> Stashed changes
 	}
 
 	/** 
