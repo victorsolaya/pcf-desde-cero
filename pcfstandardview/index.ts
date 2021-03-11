@@ -6,8 +6,6 @@ import * as ReactDOM from 'react-dom'
 import FormComponent from "./components/form";
 import { FieldForm } from "./utilities/interfaces";
 
-
-
 export class pcfstandardview implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 	container: HTMLDivElement;
 	context: ComponentFramework.Context<IInputs>;
