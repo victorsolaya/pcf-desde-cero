@@ -45,10 +45,6 @@ export class pcfstandardview implements ComponentFramework.StandardControl<IInpu
 		// Add code to update control view
 		const dataset = this.context.parameters.dataset;
 		const columns = dataset.columns;
-<<<<<<< Updated upstream
-		const records = dataset.records;
-		
-=======
 		// Obtener los registros en un array
 		const record = Object.values(dataset.records)[0];
 		let arrayFields: FieldForm[] = [];
@@ -61,7 +57,6 @@ export class pcfstandardview implements ComponentFramework.StandardControl<IInpu
 		}
 
 		ReactDOM.render(React.createElement(FormComponent, {arrayFields, record}), this.container);
->>>>>>> Stashed changes
 	}
 
 	/** 
